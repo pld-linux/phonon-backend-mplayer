@@ -1,6 +1,14 @@
+
+#TODO
+
+# Linking CXX shared module phonon_mplayer.so
+# /usr/bin/ld: libmplayer/liblibmplayer.a(MPlayerProcess.cpp.o): relocation R_X86_64_32S against `_ZN7QString11shared_nullE' can not be used when making a shared object; recompile with -fPIC
+# libmplayer/liblibmplayer.a: could not read symbols: Bad value
+
+
+
 %define		qtver		4.6.3
 %define		kdever		4.4.5
-%define		vlcver		1.1.0
 
 Summary:	mplayer backend for Phonon
 Summary(pl.UTF-8):	Wtyczka mplayer dla Phonona
@@ -29,7 +37,7 @@ mplayer backend for Phonon.
 Wtyczka mplayer dla Phonona.
 
 %prep
-%setup -q
+%setup -q -n phonon-phonon-mplayer
 
 %build
 install -d build
@@ -54,5 +62,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/kde4/plugins/phonon_backend/phonon_vlc.so
-%{_datadir}/kde4/services/phononbackends/vlc.desktop
+%attr(755,root,root) %{_libdir}/kde4/plugins/phonon_backend/phonon_mplayer.so
+#%{_datadir}/kde4/services/phononbackends/vlc.desktop
