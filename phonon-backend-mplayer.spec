@@ -63,4 +63,4 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/kde4/plugins/phonon_backend/phonon_mplayer.so
-#%{_datadir}/kde4/services/phononbackends/vlc.desktop
+%{_datadir}/kde4/services/phononbackends/mplayer.desktop
