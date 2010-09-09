@@ -6,7 +6,7 @@ Summary:	mplayer backend for Phonon
 Summary(pl.UTF-8):	Wtyczka mplayer dla Phonona
 Name:		phonon-backend-mplayer
 Version:	0.git.20100908
-Release:	0.2
+Release:	1
 License:	LGPL 2.1
 Group:		X11/Applications
 Source0:	http://www.gitorious.org/phonon/phonon-mplayer/archive-tarball/master
@@ -53,6 +53,17 @@ rm -rf $RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%post
+%banner %{name} -e <<EOF
+There is no support to choice playback device from phonon
+configurartion. If you want to choice different playback device, you
+must manualy set this in .mplayer/config.
+
+Example for second playback device and master mixer channel.
+ao=alsa:device=hw=0.1
+mixer-channel=Master
+EOF
 
 %files
 %defattr(644,root,root,755)
