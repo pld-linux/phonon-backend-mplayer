@@ -6,7 +6,7 @@ Summary:	mplayer backend for Phonon
 Summary(pl.UTF-8):	Wtyczka mplayer dla Phonona
 Name:		phonon-backend-mplayer
 Version:	0.git.20100908
-Release:	1
+Release:	2
 License:	LGPL 2.1
 Group:		X11/Applications
 Source0:	http://www.gitorious.org/phonon/phonon-mplayer/archive-tarball/master
@@ -21,6 +21,7 @@ BuildRequires:	phonon-devel
 BuildRequires:	qt4-build >= %{qtver}
 BuildRequires:	qt4-qmake >= %{qtver}
 BuildRequires:	rpmbuild(macros) >= 1.293
+Provides:	qt4-phonon-backend = %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
