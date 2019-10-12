@@ -6,7 +6,7 @@ Summary:	mplayer backend for Phonon
 Summary(pl.UTF-8):	Wtyczka mplayer dla Phonona
 Name:		phonon-backend-mplayer
 Version:	0.git.20100908
-Release:	2
+Release:	3
 License:	LGPL 2.1
 Group:		X11/Applications
 Source0:	http://www.gitorious.org/phonon/phonon-mplayer/archive-tarball/master
