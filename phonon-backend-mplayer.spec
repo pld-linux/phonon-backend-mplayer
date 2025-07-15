@@ -32,7 +32,7 @@ Wtyczka mplayer dla Phonona.
 
 %prep
 %setup -q -n phonon-phonon-mplayer
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 install -d build
